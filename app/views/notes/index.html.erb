@@ -1,0 +1,14 @@
+<div>
+  <h1>Enter your Note</h1>
+  <%= simple_form_for @note, url: notes_path do |f| %>
+    <%= f.input :user_input %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>
+
+<br />
+<br />
+
+<% @notes.each do |note| %>
+  <p><%= note.user_input %></p>
+<% end %>

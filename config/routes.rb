@@ -1,6 +1,7 @@
 Quiz1::Application.routes.draw do
 
-  root 'tests#index'
+  root 'notes#index'
+  resources :notes, only: [:new, :create, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
